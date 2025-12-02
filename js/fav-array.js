@@ -1,0 +1,3 @@
+let favArray = [];
+
+export { favArray};
