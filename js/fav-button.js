@@ -10,6 +10,7 @@ function addFavs (newFact){
     }
     if (added == false){
         favArray.push(newFact);
+        error = 'added fact to favorite list';
     }
     return {favArray, error}; 
     }
