@@ -7,8 +7,7 @@ let initialFactButton = document.getElementById("new-fact-btn");
 let addFavButton = document.getElementById("save-fact-btn");
 let fact = null;
 let favButton = document.getElementById("favorites-btn");
-let factButtonsContainer = document.getElementById('buttons-container')
-
+let intro = document.getElementById("intro");
 
 function favViewer (fact) {
         let view = document.createElement('p');
@@ -22,6 +21,8 @@ initialFactButton?.addEventListener("click", async () => {
         fact = await newFact();
         contentViewer.innerHTML = '';
         favPart.innerHTML = '';
+        intro.textContent ='Do you know this?';
+
         const factViewer = document.createElement('p');
         factViewer.classList.add('fact-text');
         factViewer.id ='fact-text';
@@ -45,11 +46,10 @@ addFavButton?.addEventListener("click",() =>{
 favButton?.addEventListener("click",() =>{
     
     favPart.innerHTML = '';
+    contentViewer.innerHTML = '';
     addFavButton.hidden = true;
     favButton.hidden = true;
-    initialFactButton.classList.add('flex-1');
-   // factButtonsContainer.classList.remove('flex-col', 'space-y-4');
-//factButtonsContainer.classList.add('flex-wrap', 'flex-row', 'gap-4');
+    intro.textContent ='Your favorite facts:';
 
     favArray.forEach((phrase, index) => {
         const favContainer = document.createElement('div');
@@ -68,8 +68,7 @@ favButton?.addEventListener("click",() =>{
             });
         favContainer.appendChild(phraseElement);
         favContainer.appendChild(deleteButton);
-        favPart.appendChild(favContainer);
-
+        contentViewer.appendChild(favContainer);
 });
 
 });
