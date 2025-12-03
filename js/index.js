@@ -14,7 +14,7 @@ function favViewer (fact) {
         view.classList.add('fav-text');
         view.id ='fav-text';
         view.textContent = fact;
-        favPart.appendChild(view);
+        return view;
     }
 
 initialFactButton?.addEventListener("click", async () => {
@@ -34,19 +34,32 @@ initialFactButton?.addEventListener("click", async () => {
 addFavButton?.addEventListener("click",() =>{
         const fav = addFavs(fact);
         favPart.innerHTML = '';
-        favViewer(fav.error);
+        let messageElement = favViewer(fav.message);
+        favPart.appendChild(messageElement);
 });
 
 favButton?.addEventListener("click",() =>{
     
     favPart.innerHTML = '';
+    
     favArray.forEach((phrase, index) => {
-        favViewer(phrase);
+        const favContainer = document.createElement('div');
+        favContainer.classList.add('favorite-item-container');
+        favContainer.dataset.index = index;
+        const phraseElement =favViewer(phrase);
+
         const deleteButton = document.createElement('button');
         deleteButton.classList.add('delete-button');
-        deleteButton.id = "fav" + index;
         deleteButton.textContent = "X";
-        favPart.appendChild(deleteButton);
+        deleteButton.addEventListener('click', (event) => {
+            const itemIndex = parseInt(favContainer.dataset.index);
+            favArray.splice(itemIndex, 1);
+            favContainer.remove();
+            favButton.click();
+            });
+        favContainer.appendChild(phraseElement);
+        favContainer.appendChild(deleteButton);
+        favPart.appendChild(favContainer);
 
 });
 
