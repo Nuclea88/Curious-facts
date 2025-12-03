@@ -1,17 +1,17 @@
 import {favArray} from './fav-array.js';
 function addFavs (newFact){
-    let error = null;
+    let message = null;
     let added = false;
     for ( let fact of favArray){
              if (fact == newFact){
-            error = 'You love this fact, you already added it!';
+            message = 'You love this fact, you already added it!';
             added = true;
         }
     }
     if (added == false){
         favArray.push(newFact);
-        error = 'added fact to favorite list';
+        message = 'fact added to your favorites';
     }
-    return {favArray, error}; 
+    return {favArray, message}; 
     }
     export {addFavs};
