@@ -6,7 +6,7 @@ async function newFact() {
 
 
         }catch (error) {
-            console.error('Error fetching new fact:', error);
+           console.error('Error fetching new fact:', error);
         return 'Could not fetch a new fact at this time.';
         }}
 
