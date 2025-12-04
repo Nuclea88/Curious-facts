@@ -1,6 +1,5 @@
 import { newFact } from '../js/fact-button.js';
 import {addFavs} from '../js/fav-button.js';
-//import { favArray } from '../js/fav-array.js';
 let contentViewer = document.getElementById('fact');
 let favPart = document.getElementById('favorite-viewer');
 let initialFactButton = document.getElementById("new-fact-btn");
