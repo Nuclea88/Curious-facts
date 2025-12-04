@@ -1,5 +1,6 @@
 import { newFact } from '../js/fact-button.js';
 import {addFavs} from '../js/fav-button.js';
+import {favArray} from './fav-array.js';
 let contentViewer = document.getElementById('fact');
 let favPart = document.getElementById('favorite-viewer');
 let initialFactButton = document.getElementById("new-fact-btn");
@@ -50,8 +51,8 @@ favButton?.addEventListener("click",() =>{
     addFavButton.hidden = true;
     favButton.hidden = true;
     intro.textContent ='Your favorite facts:';
-    let favArrayRecovered = localStorage.getItem(localKey);
-    let favArray = favArrayRecovered ? JSON.parse(favArrayRecovered) : [];
+    //let favArrayRecovered = localStorage.getItem(localKey);
+   // let favArray = favArrayRecovered ? JSON.parse(favArrayRecovered) : [];
     if (favArray.length === 0) {
         favPart.textContent = 'You haven\'t added any favorite facts yet!';
         return;
@@ -69,7 +70,7 @@ favButton?.addEventListener("click",() =>{
             const itemIndex = parseInt(favContainer.dataset.index);
             favArray.splice(itemIndex, 1);
             localStorage.setItem(localKey, JSON.stringify(favArray));
-            favContainer.remove();
+           // favContainer.remove();
             favButton.click();
             });
         favContainer.appendChild(phraseElement);
