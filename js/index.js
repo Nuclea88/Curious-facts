@@ -51,8 +51,6 @@ favButton?.addEventListener("click",() =>{
     addFavButton.hidden = true;
     favButton.hidden = true;
     intro.textContent ='Your favorite facts:';
-    //let favArrayRecovered = localStorage.getItem(localKey);
-   // let favArray = favArrayRecovered ? JSON.parse(favArrayRecovered) : [];
     if (favArray.length === 0) {
         favPart.textContent = 'You haven\'t added any favorite facts yet!';
         return;
