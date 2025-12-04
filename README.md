@@ -29,10 +29,13 @@ La aplicación cumple con los siguientes requisitos:
 
 El proyecto sigue una arquitectura modular y de Atomic Design:
 /
+
 ├── assets/                
 ├── css/
+
 │   └── style.css         
 ├── js/
+
 │   ├── index.js          
 │   ├── fact-button.js     
 │   ├── fav-button.js      
