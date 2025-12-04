@@ -1,0 +1,24 @@
+{
+  "name": "curious-facts",
+  "version": "1.0.0",
+  "description": "app for curious facts from external api",
+  "homepage": "https://github.com/Nuclea88/Curious-facts#readme",
+  "bugs": {
+    "url": "https://github.com/Nuclea88/Curious-facts/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nuclea88/Curious-facts.git"
+  },
+  "license": "ISC",
+  "author": "Ingrid Lopez",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "tailwindcss": "^4.1.17",
+    "vitest": "^4.0.15"
+  }
+}
