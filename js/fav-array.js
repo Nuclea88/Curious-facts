@@ -7,4 +7,4 @@ if (storedFavs) {
     favArray = [];
 }
 
-export { favArray};
+export {favArray};
