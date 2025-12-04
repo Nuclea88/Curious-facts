@@ -4,19 +4,23 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Curious facts</title>
-        <link rel="stylesheet" href="">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="./css/style.css">
     </head>
-    <body>
-        <main class = "app-container">
+    <body class="bg-gray-100 min-h-screen flex items-center justify-center p-4 space-x-4">
+        <main class = "app-container bg-white shadow-xl rounded-lg p-6 w-full max-w-sm lg:max-w-6xl">
             <section id="viewer" class="section-container">
-                <h1>do you know this?</h1>
-                <div id="fact"></div>
-                <div class="fact-buttons">
-                 <button id="new-fact-btn" class="btn new-btn">get curious fact</button>
-                 <button hidden id="save-fact-btn" class="btn save-btn">Add to favorites</button>
-                 <button id="favorites-btn" class="btn fav-btn">See your favorite facts!</button>
-                 <button hidden id="more-fact-btn" class="btn more-btn">get another curious fact</button>
-
+                <h1 id="intro" class="text-xl font-bold mb-6 text-left lg:text-center">Do you know this?</h1>
+                <div id="fact" class="min-h-12 text-center italic text-lg mb-6"></div>
+                <div id ='favorite-viewer' class="w-full mt-4 space-y-2 font-bold p-6 text-center"></div>
+                <div id="buttons-container"class="fact-buttons flex flex-col items-center space-y-4 w-full">
+                <button hidden id="save-fact-btn" class="btn save-btn w-fit py-3 rounded-full text-white font-bold bg-gradient-to-r from-pink-500 to-fuchsia-600 hover:opacity-90 transition-opacity shadow-lg">
+                        Add to favorites</button>
+                 <button id="new-fact-btn" class="btn new-btn w-fit py-3 rounded-full text-white font-bold bg-gradient-to-r from-cyan-500 to-teal-600 hover:opacity-90 transition-opacity shadow-lg ">
+                    Get curious fact</button>
+                 <button id="favorites-btn" class="btn fav-btn w-fit py-3 rounded-full text-white font-bold bg-gradient-to-r from-amber-500 to-orange-600 hover:opacity-90 transition-opacity shadow-lg">
+                        See your favorite facts!</button>
+                 
                 </div>
             </section>
         </main>
