@@ -28,21 +28,30 @@ La aplicación cumple con los siguientes requisitos:
 ## 📂 Estructura del Proyecto
 
 El proyecto sigue una arquitectura modular y de Atomic Design:
-
-
 /
-├── assets/                # imágenes y recursos
+├── assets/                
 ├── css/
-│   └── style.css          # Estilos personalizados y resets
+│   └── style.css         
 ├── js/
-│   ├── index.js           # Punto de entrada y orquestador de eventos
-│   ├── fact-button.js     # Lógica de llamada a la API (Fetch)
-│   ├── fav-button.js      # Lógica de negocio para añadir favoritos
-│   └── fav-array.js       # Estado: Almacenamiento de datos (Array)
-├── tests/                 # Pruebas unitarias con Vitest
-├── index.html             # Único punto de entrada HTML (SPA)
-├── package.json           # Dependencias (Vitest)
-└── README.md              # Documentación del proyecto
+│   ├── index.js          
+│   ├── fact-button.js     
+│   ├── fav-button.js      
+│   └── fav-array.js       
+├── tests/                 
+├── index.html             
+├── package.json          
+└── README.md             
+
+assets:  imágenes y recursos
+style.css: Estilos personalizados y resets
+index.js: Punto de entrada y orquestador de eventos
+fact-button.js: Lógica de llamada a la API (Fetch)
+fav-button.js: Lógica de negocio para añadir favoritos
+fav-array.js: Almacenamiento de datos (Array)
+tests: Pruebas unitarias con Vitest
+index.html: Único punto de entrada HTML (SPA)
+package.json: Dependencias (Vitest)
+README.md: Documentación del proyecto
 
 ## 🚀 Instalación y Uso
 
