@@ -6,13 +6,13 @@ const fact = 'do you know?';
     it('should be add the fact to fav array facts',()=>{
         const result = addFavs(fact);
         expect(result.favArray).toContain(fact);
-        expect(result.error).toContain('added fact to favorite list');
+        expect(result.message).toContain('fact added to your favorites');
 
     });
     it('should not to be add the fact if this fact is in fav array facts', () =>{
          const result = addFavs(fact);
         expect(result.favArray).toContain(fact);
-        expect(result.error).contain('You love this fact, you already added it!');
+        expect(result.message).toContain('You love this fact, you already added it!');
 
     });
 });
